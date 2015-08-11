@@ -5,8 +5,8 @@ var gulp   = require('gulp')
 
 // Call Watch
 module.exports = gulp.task('watch', function () {
-  gulp.watch([paths.source.jade, paths.source.files.config], ['jade']);
-  gulp.watch(paths.source.ls, ['ls']);
-  gulp.watch(paths.source.styl, ['stylint', 'stylus']);
+  gulp.watch([paths.source.slides, paths.source.templates, paths.source.files.config], ['jade']);
+  gulp.watch(paths.source.js, ['js']);
+  gulp.watch(paths.source.styl, ['stylus']);
   gulp.watch(paths.source.img, ['imagemin']);
 });
