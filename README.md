@@ -1,8 +1,8 @@
-[ ![Codeship Status for mabrasil/lumberpack](https://codeship.com/projects/e5c0fd40-146c-0133-f7df-26b4121038d9/status?branch=master)](https://codeship.com/projects/93079)
-[![Build Status](https://travis-ci.org/mabrasil/lumberpack.svg?branch=master)](https://travis-ci.org/mabrasil/lumberpack)
-[![Code Climate](https://codeclimate.com/github/mabrasil/lumberpack/badges/gpa.svg)](https://codeclimate.com/github/mabrasil/lumberpack)
-[![Dependency Status](https://david-dm.org/mabrasil/lumberpack.png)](https://david-dm.org/mabrasil/lumberpack)
-[![devDependency Status](https://david-dm.org/mabrasil/lumberpack/dev-status.svg)](https://david-dm.org/mabrasil/lumberpack#info=devDependencies)
+[ ![Codeship Status for mabrasil/xzibit](https://codeship.com/projects/864df420-22a8-0133-e840-3a07b3152e0a/status?branch=master)](https://codeship.com/projects/96247)
+[![Build Status](https://travis-ci.org/mabrasil/xzibit.svg?branch=master)](https://travis-ci.org/mabrasil/xzibit)
+[![Code Climate](https://codeclimate.com/github/mabrasil/xzibit/badges/gpa.svg)](https://codeclimate.com/github/mabrasil/xzibit)
+[![Dependency Status](https://david-dm.org/mabrasil/xzibit.png)](https://david-dm.org/mabrasil/xzibit)
+[![devDependency Status](https://david-dm.org/mabrasil/xzibit/dev-status.svg)](https://david-dm.org/mabrasil/xzibit#info=devDependencies)
 
 # The 21st Century's Lumberjack's Boilerplate
 
