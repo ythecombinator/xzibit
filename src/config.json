@@ -1,38 +1,12 @@
 {
-   "about":{
-      "name": "",
-      "description": "",
-      "color": "",
-      "favicon": ""
-   },
-   "social":{
-      "facebook":{
-        "admins":"",
-        "url": "",
-        "type": "",
-        "name": "",
-        "title": "",
-        "description": "",
-        "image": ""
-      },
-      "twitter":{
-         "card": "",
-         "site": "",
-         "title": "",
-         "description": "",
-         "image": ""
-      },
-      "plus":{
-         "name": "",
-         "description": "",
-         "image": ""
-      }
-   },
-   "deploy":{
-      "rsync":{
-        "username":"",
-        "hostname": "",
-        "dest": ""
-      }
-   }
+  "about": {
+    "title": "Conference name",
+    "description": "Conference description",
+    "author": "Conference description",
+    "cover": "img/logo.png",
+    "site": {
+        "url": "Conference Example",
+        "googleAnalytics": "UA-33656081-1"
+    }
+  }
 }
