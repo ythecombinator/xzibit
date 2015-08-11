@@ -3,29 +3,34 @@
 module.exports = {
 
     source: {
-        jade: 'src/templates/**/*.jade',
-        ls: 'src/scripts/**/*.ls',
+        templates: 'src/templates/**/*.jade',
+        slides: 'src/slides/*.jade',
+        js: 'src/scripts/**/*.js',
         styl: 'src/styles/**/*.styl',
         img: 'src/images/**/*.{jpg,png,gif}',
+        videos: 'src/videos/**/*',
         files: {
             config: './src/config.json',
-            jade: 'src/templates/*.jade',
-            styl: 'src/styles/main.styl'
+            jade: 'src/templates/index.jade',
+            styl: 'src/styles/main.styl',
+            notes: 'src/js/vendor/plugins/notes/notes.html'
         }
 
     },
 
     browserSync: {
-        html: 'www/**/*.html',
-        js: 'www/js/**/*.js',
-        css: 'www/css/**/*.css',
-        img: 'www/img/**/*'
+        html: 'out/**/*.html',
+        js: 'out/js/**/*.js',
+        css: 'out/css/**/*.css',
+        img: 'out/img/**/*'
     },
 
     build: {
-        html: './www/',
-        js: 'www/js',
-        css: 'www/css',
-        img: 'www/img'
+        html: './out/',
+        js: 'out/js',
+        css: 'out/css',
+        img: 'out/img',
+        videos: 'out/videos',
+        notes: 'out/js/vendor/plugins/notes/'
     }
 };
