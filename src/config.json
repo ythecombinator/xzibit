@@ -1,11 +1,11 @@
 {
   "about": {
-    "title": "Conference name",
-    "description": "Conference description",
-    "author": "Conference description",
-    "cover": "img/logo.png",
+    "title": "My Awesome Presentation",
+    "description": "My Awesome Presentation @ an Awesome Event",
+    "author": "An Awesome Speaker",
+    "cover": "images/logo.png",
     "site": {
-        "url": "Conference Example",
+        "url": "https://github.com/mabrasil/xzibit",
         "googleAnalytics": "UA-33656081-1"
     }
   }
