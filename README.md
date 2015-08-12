@@ -306,6 +306,6 @@ the MIT License.
 
 ## Credits
 
-- Part of this project's original structure - some tasks and directories organization - was tasks taken
-from [Willian Justen](https://github.com/willianjusten)'s [Fast Boilerplate](https://github.com/willianjusten/Fast) -
+- Part of this project's original structure - some tasks and directories organization - was taken
+from [Willian Justen](https://github.com/willianjusten)'s [reveal-boilerplate](https://github.com/willianjusten/reveal-boilerplate) -
 maybe now the two projects look very different.
