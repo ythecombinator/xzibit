@@ -8,5 +8,12 @@
         "url": "https://github.com/mabrasil/xzibit",
         "googleAnalytics": "UA-33656081-1"
     }
-  }
+  },
+   "deploy":{
+      "rsync":{
+        "username":"",
+        "hostname": "",
+        "dest": ""
+      }
+   }
 }
