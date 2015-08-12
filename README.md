@@ -96,10 +96,12 @@ If everything from the [Getting Started](#getting-started) section goes well, yo
 |-- src/
 |   |-- images/
 |   |-- scripts/
+|   |-- slides/
 |   |-- styles/
 |   |-- templates/
+|   |-- videos/
 |   |-- config.json
-|-- www/
+|-- out/
 |   |-- css/
 |       |-- main.css
 |   |-- img/
@@ -122,31 +124,31 @@ Contains the module with all the *gulp tasks*.
 
 ##### [`src/images/`](/src/images/)
 
-Contains the the *images* that will be used in your project.
+Contains the *images* that will be used in your presentation.
 
 ##### [`src/scripts/`](/src/scripts/)
 
-Contains the *scripts* - written in *Livescript* - that will be used in your project.
+Contains the *scripts* - written in *Livescript* - that will be used in your presentation.
+
+##### [`src/slides/`](/src/slides/)
+
+Contains each *slide* - written in *Jade* - of your presentation.
 
 ##### [`src/styles/`](/src/styles/)
 
-Contains the *styles* - written in *Stylus* - that will be used in your project.
+Contains the *styles* - written in *Stylus* - that will be used in your presentation.
 
 ##### [`src/templates/`](/src/templates/)
 
-Contains the *tamplates* - written in *Jade* - that will be used in your project.
+Contains the *tamplates* - written in *Jade* - that will be used in your presentation.
 
 ##### [`src/config.json`](/src/config.json)
 
-Contains some of basic info from your site that will be rendered in the templates.
+Contains some of basic info from your presentation that will be rendered in the templates.
 
-##### www/
+##### out/
 
 This is where the generated files are stored, once the tasks are finished. However, this directory is unnecessary in versioning, so it's [ignored](.gitignore).
-
-##### [`.stylintrc`](.stylintrc)
-
-It defines some options available to stylint.
 
 ##### [`gulpfile.js`](gulpfile.js)
 
@@ -163,14 +165,12 @@ All the Gulp tasks are in the [`tasks/`](gulp/tasks) folder. Each one consists o
 |     Command         |                Description                |
 |---------------------|-------------------------------------------|
 | `gulp`              | Initialize watch for changes and a server |
-| `gulp ls`           | Compile Livescript files                  |
 | `gulp jade`         | Compile Jade files                        |
 | `gulp stylus`       | Compile Stylus files                      |
 | `gulp imagemin`     | Compress image files                      |
 | `gulp watch`        | Call to watch files                       |
 | `gulp deploy-rsync` | Deploy via rsync                          |
-| `gulp -p`           | Minify all files for production           |
-| `gulp build -p`     | Minify files and deploy via rsync         |
+| `gulp build`        | Minify files and deploy via rsync         |
 
 #### Setup the project's basic info
 
@@ -179,35 +179,16 @@ to change some general data - like the site *name* or *descrption*. The `config.
 
 ```json
 {
-   "about":{
-      "name": "",
-      "description": "",
-      "color": "",
-      "favicon": ""
-   },
-   "social":{
-      "facebook":{
-        "admins":"",
-        "url": "",
-        "type": "",
-        "name": "",
-        "title": "",
-        "description": "",
-        "image": ""
-      },
-      "twitter":{
-         "card": "",
-         "site": "",
-         "title": "",
-         "description": "",
-         "image": ""
-      },
-      "plus":{
-         "name": "",
-         "description": "",
-         "image": ""
-      }
-   },
+  "about": {
+    "title": "My Awesome Presentation",
+    "description": "My Awesome Presentation @ an Awesome Event",
+    "author": "An Awesome Speaker",
+    "cover": "images/logo.png",
+    "site": {
+        "url": "https://github.com/mabrasil/xzibit",
+        "googleAnalytics": "UA-33656081-1"
+    }
+  },
    "deploy":{
       "rsync":{
         "username":"",
@@ -216,18 +197,15 @@ to change some general data - like the site *name* or *descrption*. The `config.
       }
    }
 }
-
 ```
 
 These are the data given by `config.json`:
 
 ##### About
 
-- `name`:
+- `title`:
 
   **Type**: `string`
-
-  **Default**: `""`
 
   **Equivalent**: `<title></title>`
 
@@ -235,153 +213,37 @@ These are the data given by `config.json`:
 
   **Type**: `string`
 
-  **Default**: `""`
-
   **Equivalent**: `<meta name="description" content="">`
 
-- `color`:
-
-  **Type**: `string` *(#HEX)*
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta name="theme-color" content="">`
-
-- `favicon`:
+- `author`:
 
   **Type**: `string`
 
-  **Default**: `""`
+  **Equivalent**: `<meta name="author" content="">`
 
-  **Equivalent**: `<link rel="icon" type="image/png" href="">`
-
-##### Social
-
-###### Facebook
-
-- `admins`:
+- `cover`:
 
   **Type**: `string`
 
-  **Default**: `""`
+  **Equivalent**:
 
-  **Equivalent**: `<meta property="fb:admins" content="">`
+    - `<meta property="og:image" content="">`
+    - `<meta property="twitter:image:src" content="">`
+    - `<meta itemprop="image" content="">`
+
+###### Site
 
 - `url`:
 
   **Type**: `string`
 
-  **Default**: `""`
+  **Description**: The *URL* of your presentation.
 
-  **Equivalent**: `<meta property="og:url" content="">`
-
-- `type`:
+- `googleAnalytics`:
 
   **Type**: `string`
 
-  **Default**: `""`
-
-  **Equivalent**: `<meta property="og:type" content="">`
-
-- `name`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta property="og:site_name" content="">`
-
-- `title`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta property="og:title" content="">`
-
-- `description`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta property="og:description" content="">`
-
-- `image`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta property="og:image" content="">`
-
-###### Twitter
-
-- `card`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta name="twitter:card" content="">`
-
-- `site`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta name="twitter:site" content="">`
-
-- `title`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta name="twitter:title" content="">`
-
-- `description`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta name="twitter:description" content="">`
-
-- `image`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta property="twitter:image:src" content="">`
-
-###### Google Plus
-
-- `name`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta itemprop="name" content="">`
-
-- `description`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta itemprop="description" content="">`
-
-- `image`:
-
-  **Type**: `string`
-
-  **Default**: `""`
-
-  **Equivalent**: `<meta itemprop="image" content="">`
+  **Description**: Your *Google Analytics ID*.
 
 ##### Deploy
 
@@ -391,15 +253,11 @@ These are the data given by `config.json`:
 
   **Type**: `string`
 
-  **Default**: `""`
-
   **Description**: Your username at the remote server.
 
 - `hostname`:
 
   **Type**: `string`
-
-  **Default**: `""`
 
   **Description**: Your server domain (URL).
 
@@ -407,54 +265,7 @@ These are the data given by `config.json`:
 
   **Type**: `string`
 
-  **Default**: `""`
-
   **Description**: Path on the server that will receive the files.
-
-##### Example
-
-Here's an example on how to fill your `config.json` file. Try it (:
-
-```json
-{
-   "about":{
-      "name": "xzibit",
-      "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
-      "color": "#c0392b",
-      "favicon": "img/favicon.png"
-   },
-   "social":{
-      "facebook":{
-        "admins":"",
-        "url": "https://github.com/mabrasil/xzibit",
-        "type": "website",
-        "name": "xzibit",
-        "title": "xzibit",
-        "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
-        "image": "img/logo.png"
-      },
-      "twitter":{
-         "card": "summary_large_image",
-         "site": "@mabrasil_io",
-         "title": "xzibit",
-         "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
-         "image": "img/logo.png"
-      },
-      "plus":{
-         "name": "xzibit",
-         "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
-         "image": "img/logo.png"
-      }
-   },
-   "deploy":{
-      "rsync":{
-        "username":"mabrasil",
-        "hostname": "mabrasil.rocks",
-        "dest": "/path/to/www"
-      }
-   }
-}
-```
 
 If everything happens okay, you must see something like this:
 
