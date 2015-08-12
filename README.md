@@ -4,11 +4,11 @@
 [![Dependency Status](https://david-dm.org/mabrasil/xzibit.png)](https://david-dm.org/mabrasil/xzibit)
 [![devDependency Status](https://david-dm.org/mabrasil/xzibit/dev-status.svg)](https://david-dm.org/mabrasil/xzibit#info=devDependencies)
 
-# The 21st Century's Lumberjack's Boilerplate
+# Create presentations using cool kids' technologies.
 
-![The tooling kit for modern lumbers](src/images/logo.png)
+![Create presentations using cool kids' technologies.](src/images/logo.png)
 
-> A simple boilerplate to easily bootstrap projects with a bunch of cool technologies.
+> Easily create modern presentations using Reveal.JS, Gulp, Jade, Stylus and more.
 
 ##Table of Contents
 
@@ -23,11 +23,11 @@
 Well, a modern lumberjack has many modern needings and it is only fair that (s)he uses some of the coolest
 technologies we have today, so this boilerplate includes:
 
-### Livescript
+### Reveal.js
 
-[LiveScript](http://livescript.net/) is a JavaScript preprocessor which has a pretty *beautiful syntax* and
-supports functional programming with lovable features like *currying*, *function composition*, *pattern matching* and
-many other ones borrowed from languages like [Haskell](https://www.haskell.org/).
+[Reveal](https://github.com/hakimel/reveal.js/) is an amazing framework for easily creating beautiful presentations using HTML. This boilerplate also comes with the following plugins:
+
+####
 
 ### Jade
 
@@ -37,17 +37,6 @@ The  [Jade Engine](http://jade-lang.com/)  is one of the most powerful templatin
 
 [Stylus](https://learnboost.github.io/stylus/) has everything that modern *CSS preprocessors* should have: *variables*,
 *mixins*, *nesting*, *extending* and many other cool things. And it's writen in Javascript and runs in *NodeJS*.
-
-#### Stylint
-
-Personally, I do think that one of the points considered as favorable to Stylus may not be that good: a more permissive syntax. But we can use a [linter](https://github.com/rossPatton/stylint) to make things more strict and enjoy the benefits of a *full JS-based stack*.
-
-#### Skeleton
-
-[Skeleton](http://getskeleton.com/) which is an amazingly simple and responsive boilerplate for Mobile-Friendly
-development.
-
-All styles used here were taken from *Skeleton*'s original styles and ported to *Stylus*.
 
 ### Gulp
 
@@ -68,12 +57,11 @@ with one task per file. You can check out the [tasks directory](gulp/tasks) to s
 
   - [NodeJS](http://nodejs.org/)
   - [GulpJS](http://gulpjs.com/)
-  - [Livescript](http://livescript.net/)
 
 2. Clone this repository:
 
   ```sh
-  $ git clone https://github.com/mabrasil/lumberpack.git my_project
+  $ git clone https://github.com/mabrasil/xzibit.git my_project
   ```
 
 3. Install all dependencies:
@@ -162,7 +150,7 @@ Contains many metadata relevant to the project.
 
 #### Understand the Gulp Tasks
 
-All the Gulp tasks are in the [`tasks/`](gulp/tasks) folder. Each one consists of a module with a function which is required into tasks defined in the [`gulpfile`](https://github.com/mabrasil/lumberpack/blob/master/gulpfile.js).
+All the Gulp tasks are in the [`tasks/`](gulp/tasks) folder. Each one consists of a module with a function which is required into tasks defined in the [`gulpfile`](https://github.com/mabrasil/xzibit/blob/master/gulpfile.js).
 
 |     Command         |                Description                |
 |---------------------|-------------------------------------------|
@@ -422,31 +410,31 @@ Here's an example on how to fill your `config.json` file. Try it (:
 ```json
 {
    "about":{
-      "name": "Lumberpack",
-      "description": "Lumberpack is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
+      "name": "xzibit",
+      "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
       "color": "#c0392b",
       "favicon": "img/favicon.png"
    },
    "social":{
       "facebook":{
         "admins":"",
-        "url": "https://github.com/mabrasil/lumberpack",
+        "url": "https://github.com/mabrasil/xzibit",
         "type": "website",
-        "name": "Lumberpack",
-        "title": "Lumberpack",
-        "description": "Lumberpack is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
+        "name": "xzibit",
+        "title": "xzibit",
+        "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
         "image": "img/logo.png"
       },
       "twitter":{
          "card": "summary_large_image",
          "site": "@mabrasil_io",
-         "title": "Lumberpack",
-         "description": "Lumberpack is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
+         "title": "xzibit",
+         "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
          "image": "img/logo.png"
       },
       "plus":{
-         "name": "Lumberpack",
-         "description": "Lumberpack is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
+         "name": "xzibit",
+         "description": "xzibit is a simple boilerplate to easily bootstrap projects with a bunch of cool technologies.",
          "image": "img/logo.png"
       }
    },
@@ -475,9 +463,9 @@ be numbered with the following format:
 
 ### Reporting a bug
 
-1. Look for any related issues [here](https://github.com/mabrasil/lumberpack/issues).
+1. Look for any related issues [here](https://github.com/mabrasil/xzibit/issues).
 2. If you find an issue that seems related, please comment there instead of creating a new issue. If it is determined to be a unique bug, we will let you know that a new issue can be created.
-3. If you find no related issue, create a new issue by clicking [here](https://github.com/mabrasil/lumberpack/issues/new).
+3. If you find no related issue, create a new issue by clicking [here](https://github.com/mabrasil/xzibit/issues/new).
 If we find an issue that's related, we will reference it and close your issue, showing you where to follow the bug.
 4. Tell us important details like what operating system you are using.
 5. Include any errors that may be displayed (see [Chrome Console instructions](https://developer.chrome.com/devtools/docs/console#opening_the_console) for how to do that).
@@ -493,16 +481,12 @@ If we find an issue that's related, we will reference it and close your issue, s
 
 ##License
 
-[Lumberpack](https://github.com/mabrasil/lumberpack) is distributed under the
+[xzibit](https://github.com/mabrasil/xzibit) is distributed under the
 MIT License, available in this repository. All contributions are assumed to be also licensed under
 the MIT License.
 
 ## Credits
 
-- All styles were taken from [Dave Gamache](https://github.com/dhg)'s [Skeleton](https://github.com/dhg/Skeleton).
-
 - Part of this project's original structure - some tasks and directories organization - was tasks taken
 from [Willian Justen](https://github.com/willianjusten)'s [Fast Boilerplate](https://github.com/willianjusten/Fast) -
 maybe now the two projects look very different.
-
-- Font used in logo: [Pinewood](http://www.fontspace.com/rick-mueller/pinewood) by [Rick Mueller](http://moorstation.org/typoasis/designers/mueller/).
