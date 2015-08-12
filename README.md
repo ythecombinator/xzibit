@@ -27,7 +27,15 @@ technologies we have today, so this boilerplate includes:
 
 [Reveal](https://github.com/hakimel/reveal.js/) is an amazing framework for easily creating beautiful presentations using HTML. This boilerplate also comes with the following plugins:
 
-####
+|    Command      |                 Description                  |
+|-----------------|----------------------------------------------|
+| *Highlight.js*  | Syntax highlighting                          |
+| *Speaker Notes* | Per-slide notes in a separate browser window |
+| *Chartist.js*   | Responsive charting library                  |
+| *Math.js*       | Rendering of math equations inside           |
+| *Print-PDF*     | Allows presentations to be exported to PDF   |
+| *vivus.js*      | Allows you to animate SVGs                   |
+| *zoom.js*       | Zoom in and out with `Alt+click`             |
 
 ### Jade
 
@@ -61,13 +69,13 @@ with one task per file. You can check out the [tasks directory](gulp/tasks) to s
 2. Clone this repository:
 
   ```sh
-  $ git clone https://github.com/mabrasil/xzibit.git my_project
+  $ git clone https://github.com/mabrasil/xzibit.git my_talk
   ```
 
 3. Install all dependencies:
 
   ```sh
-  $ cd my_project
+  $ cd my_talk
   $ npm install
   ```
 
