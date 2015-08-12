@@ -267,6 +267,25 @@ These are the data given by `config.json`:
 
   **Description**: Path on the server that will receive the files.
 
+#### Write your slides
+
+- Each new **slide** (horizontally navigated) is a new `.jade` file in which we work on - and after add in
+ `src/templates/index.jade` making the includes in the order of presentation.
+
+- Each new **vertical slide** (vertically navigated, inside a **slide**) is a `section.sec-slide` within the `section`
+ in the slide that you're working in.
+
+- Each new **fragment** (that makes elements appear as you navigate inside the slide - giving more interactivity) you
+ have to add `.fragment` in the element. Ex.: If you want a list, but you don't want it to be displayed at once, but as
+ you navigate in the slide, then you do:
+
+```jade
+ul
+    li.fragment Item 1
+    li.fragment Item 2
+    li.fragment Item 3
+```
+
 If everything happens okay, you must see something like this:
 
 ![Screenshot](/screenshot.png)
