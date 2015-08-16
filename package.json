@@ -46,10 +46,10 @@
     "Jade",
     "Stylus"
   ],
-  "author": "Matheus Brasil",
+  "author": "Matheus Brasil <mabrasil.rocks>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mabrasil/xzibit/issues"
   },
-  "homepage": "https://github.com/mabrasil/xzibit#readme"
+  "homepage": "https://github.com/mabrasil/xzibit"
 }
