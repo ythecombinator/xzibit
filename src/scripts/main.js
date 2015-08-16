@@ -10,15 +10,13 @@ Reveal.initialize({
   // Optional reveal.js plugins
 
   dependencies: [
-    { src: '/js/vendor/libs/classList.js', condition: function() { return !document.body.classList; } },
-    { src: 'js/vendor/plugins/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-    { src: 'js/vendor/plugins/notes/notes.js', async: true },
-    { src: 'js/vendor/plugins/chartist/chartist.js', async: true },
-    { src: 'js/vendor/plugins/math/math.js', async: true },
-    { src: 'js/vendor/plugins/print-pdf/print-pdf.js', async: true },
-    { src: 'js/vendor/plugins/vivus/vivus.min.js', async: true },
-    { src: 'js/vendor/plugins/zoom-js/zoom.js', async: true }
+    { src: 'vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'vendor/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'vendor/reveal.js/plugin/notes/notes.js', async: true },
+    { src: 'vendor/reveal.js/plugin/math/math.js', async: true },
+    { src: 'vendor/reveal.js/plugin/print-pdf/print-pdf.js', async: true },
+    { src: 'vendor/reveal.js/plugin/zoom-js/zoom.js', async: true },
+    { src: 'vendor/chartist/dist/chartist.min.js', async: true },
+    { src: 'vendor/chartist/dist/vivus.min.js', async: true }
   ]
 });
-
-
