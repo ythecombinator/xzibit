@@ -6,7 +6,7 @@
 
 # Create presentations using cool kids' technologies.
 
-![Create presentations using cool kids' technologies.](src/images/logo.png)
+[[src/images/logo.png|width=500px]]
 
 > Easily create modern presentations using Reveal.JS, Gulp, Jade, Stylus and more.
 
