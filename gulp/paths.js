@@ -29,7 +29,8 @@ module.exports = {
         html: './out/',
         js: 'out/js',
         css: 'out/css',
-        img: 'out/img',
+        imgMinify: 'out/img',
+        imgClean: 'out/img/**/*.{jpg,png,gif}',
         videos: 'out/videos',
         notes: 'out/js/vendor/plugins/notes/'
     }
