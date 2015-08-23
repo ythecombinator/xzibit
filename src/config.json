@@ -3,7 +3,7 @@
     "title": "My Awesome Presentation",
     "description": "My Awesome Presentation @ an Awesome Event",
     "author": "An Awesome Speaker",
-    "cover": "images/logo.png",
+    "cover": "img/screenshot.png",
     "site": {
         "url": "https://github.com/mabrasil/xzibit",
         "googleAnalytics": "UA-33656081-1"

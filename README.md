@@ -319,7 +319,7 @@ All the Gulp tasks are in the [`tasks/`](gulp/tasks) folder. Each one consists o
 
 If everything happens okay, you must see something like this:
 
-![Screenshot](/screenshot.png)
+![Screenshot](/src/images/screenshot.png)
 
 ## Contributing
 
