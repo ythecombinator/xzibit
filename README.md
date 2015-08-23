@@ -64,6 +64,7 @@ with one task per file. You can check out the [tasks directory](gulp/tasks) to s
 1. Make sure you have the main dependencies to run this boilerplate:
 
   - [NodeJS](http://nodejs.org/)
+  - [Bower](http://bower.io/)
   - [GulpJS](http://gulpjs.com/)
 
 2. Clone this repository:
@@ -77,6 +78,7 @@ with one task per file. You can check out the [tasks directory](gulp/tasks) to s
   ```sh
   $ cd my_talk
   $ npm install
+  $ bower install
   ```
 
 4. Run the default gulp task:
@@ -87,94 +89,9 @@ with one task per file. You can check out the [tasks directory](gulp/tasks) to s
 
 ### Next Steps
 
-#### Understand the Folders and Files structure
-
-If everything from the [Getting Started](#getting-started) section goes well, you should have this:
-
-```
-|-- gulp/
-|-- src/
-|   |-- images/
-|   |-- scripts/
-|   |-- slides/
-|   |-- styles/
-|   |-- templates/
-|   |-- videos/
-|   |-- config.json
-|-- out/
-|   |-- css/
-|       |-- main.css
-|   |-- img/
-|   |-- js/
-|       |-- main.js
-|   |-- index.html
-|-- .editorconfig
-|-- .stylintrc
-|-- gulpfile.js
-|-- package.json
-```
-
-Now let's find out what each one of those files and folders mean.
-
-P.S.: Some very commom files - or less important - are shown here, such as the `.md` ones - *README*, *LICENSE* *CONTRIBUTING* -, the CIs tracking files like `.codeclimate.yml` or `.travis.yml` and others.
-
-##### [`gulp/`](/gulp/)
-
-Contains the module with all the *gulp tasks*.
-
-##### [`src/images/`](/src/images/)
-
-Contains the *images* that will be used in your presentation.
-
-##### [`src/scripts/`](/src/scripts/)
-
-Contains the *scripts* - written in *Livescript* - that will be used in your presentation.
-
-##### [`src/slides/`](/src/slides/)
-
-Contains each *slide* - written in *Jade* - of your presentation.
-
-##### [`src/styles/`](/src/styles/)
-
-Contains the *styles* - written in *Stylus* - that will be used in your presentation.
-
-##### [`src/templates/`](/src/templates/)
-
-Contains the *tamplates* - written in *Jade* - that will be used in your presentation.
-
-##### [`src/config.json`](/src/config.json)
-
-Contains some of basic info from your presentation that will be rendered in the templates.
-
-##### out/
-
-This is where the generated files are stored, once the tasks are finished. However, this directory is unnecessary in versioning, so it's [ignored](.gitignore).
-
-##### [`gulpfile.js`](gulpfile.js)
-
-Calls the gulp tasks.
-
-##### [`package.json`](package.json)
-
-Contains many metadata relevant to the project.
-
-#### Understand the Gulp Tasks
-
-All the Gulp tasks are in the [`tasks/`](gulp/tasks) folder. Each one consists of a module with a function which is required into tasks defined in the [`gulpfile`](https://github.com/mabrasil/xzibit/blob/master/gulpfile.js).
-
-|     Command         |                Description                |
-|---------------------|-------------------------------------------|
-| `gulp`              | Initialize watch for changes and a server |
-| `gulp jade`         | Compile Jade files                        |
-| `gulp stylus`       | Compile Stylus files                      |
-| `gulp imagemin`     | Compress image files                      |
-| `gulp watch`        | Call to watch files                       |
-| `gulp deploy-rsync` | Deploy via rsync                          |
-| `gulp build`        | Minify files and deploy via rsync         |
-
 #### Setup the project's basic info
 
-Some of basic info from your site will be rendered from a [`config.json`](/src/config.json) file. This is done to make it easier
+Some of basic metadata from your slides will be rendered from a [`config.json`](/src/config.json) file. This is done to make it easier
 to change some general data - like the site *name* or *descrption*. The `config.json` initial structure is:
 
 ```json
@@ -189,13 +106,18 @@ to change some general data - like the site *name* or *descrption*. The `config.
         "googleAnalytics": "UA-33656081-1"
     }
   },
-   "deploy":{
-      "rsync":{
-        "username":"",
-        "hostname": "",
-        "dest": ""
-      }
-   }
+  "deploy":{
+    "rsync":{
+      "username":"",
+      "hostname": "",
+      "dest": ""
+    },
+    "github":{
+      "remoteUrl": "",
+      "branch": "",
+      "message": "Deployed to Github Pages at [timestamp]"
+    }
+  }
 }
 ```
 
@@ -267,6 +189,28 @@ These are the data given by `config.json`:
 
   **Description**: Path on the server that will receive the files.
 
+###### Github Pages
+
+- `remoteUrl`:
+
+  **Type**: `string`
+
+  **Description**: URL for the remote of your repo.
+
+- `branch`:
+
+  **Type**: `string`
+
+  **Description**: The branch where deploy will by done.
+
+- `message`:
+
+  **Type**: `string`
+
+  **Description**: The desired commit message.
+
+> You can also add to your `config.json` all the options supported by [gulp-gh-pages](https://www.npmjs.com/package/gulp-gh-pages).
+
 #### Write your slides
 
 - Each new **slide** (horizontally navigated) is a new `.jade` file in which we work on - and after add in
@@ -285,6 +229,93 @@ ul
     li.fragment Item 2
     li.fragment Item 3
 ```
+
+#### Understand the Folders and Files structure
+
+If everything from the [Getting Started](#getting-started) section goes well, you should have this:
+
+```
+|-- gulp/
+|-- src/
+|   |-- images/
+|   |-- scripts/
+|   |-- slides/
+|   |-- styles/
+|   |-- templates/
+|   |-- videos/
+|   |-- config.json
+|-- out/
+|   |-- css/
+|       |-- main.css
+|   |-- img/
+|   |-- js/
+|       |-- main.js
+|   |-- index.html
+|-- .editorconfig
+|-- .stylintrc
+|-- gulpfile.js
+|-- package.json
+```
+
+Now let's find out what each one of those files and folders mean.
+
+P.S.: Some very commom files - or less important - are shown here, such as the `.md` ones - *README*, *LICENSE* *CONTRIBUTING* -, the CIs tracking files like `.codeclimate.yml` or `.travis.yml` and others.
+
+##### [`gulp/`](/gulp/)
+
+Contains the module with all the *gulp tasks*.
+
+##### [`src/images/`](/src/images/)
+
+Contains the *images* that will be used in your presentation.
+
+##### [`src/scripts/`](/src/scripts/)
+
+Contains the *scripts* that will be used in your presentation.
+
+##### [`src/slides/`](/src/slides/)
+
+Contains each *slide* - written in *Jade* - of your presentation.
+
+##### [`src/styles/`](/src/styles/)
+
+Contains the *styles* - written in *Stylus* - that will be used in your presentation.
+
+##### [`src/templates/`](/src/templates/)
+
+Contains the *tamplates* - written in *Jade* - that will be used in your presentation.
+
+##### [`src/config.json`](/src/config.json)
+
+Contains some of basic info from your presentation that will be rendered in the templates.
+
+##### out/
+
+This is where the generated files are stored, once the tasks are finished. However, this directory is unnecessary in versioning, so it's [ignored](.gitignore).
+
+##### [`gulpfile.js`](gulpfile.js)
+
+Calls the gulp tasks.
+
+##### [`package.json`](package.json)
+
+Contains many metadata relevant to the project.
+
+#### Understand the Gulp Tasks
+
+All the Gulp tasks are in the [`tasks/`](gulp/tasks) folder. Each one consists of a module with a function which is required into tasks defined in the [`gulpfile`](https://github.com/mabrasil/xzibit/blob/master/gulpfile.js).
+
+|     Command         |                Description                |
+|---------------------|-------------------------------------------|
+| `gulp`              | Initialize watch for changes and a server |
+| `gulp jade`         | Compile Jade files                        |
+| `gulp stylus`       | Compile Stylus files                      |
+| `gulp img-clean`    | Clean the images folder                   |
+| `gulp img-minify`   | Compress image files                      |
+| `gulp watch`        | Call to watch files                       |
+| `gulp deploy-rsync` | Deploy via rsync                          |
+| `gulp deploy-gh   ` | Deploy to Github Pages                    |
+| `gulp build`        | Minify files and deploy via both          |
 
 If everything happens okay, you must see something like this:
 
