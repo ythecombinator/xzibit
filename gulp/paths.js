@@ -33,5 +33,6 @@ module.exports = {
         imgClean: 'out/img/**/*.{jpg,png,gif}',
         videos: 'out/videos',
         notes: 'out/js/vendor/plugins/notes/'
+        deploy:'out/**/*.*',
     }
 };

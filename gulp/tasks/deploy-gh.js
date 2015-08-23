@@ -9,6 +9,6 @@ var gulp    = require('gulp')
 
 // Deploy to GitHub Pages
 module.exports = gulp.task('deploy-gh', function () {
-  return gulp.src(paths.build.html)
-    .pipe(ghPages({remoteUrl: "https://github.com/mabrasil/lumberpack-testing.git", branch:"gh-pages", message:"Testing at [timestamp]", force:true, }));
+    return gulp.src(paths.build.deploy)
+        .pipe(ghPages(config.deploy.github));
 });

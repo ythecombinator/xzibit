@@ -9,11 +9,16 @@
         "googleAnalytics": "UA-33656081-1"
     }
   },
-   "deploy":{
-      "rsync":{
-        "username":"",
-        "hostname": "",
-        "dest": ""
-      }
-   }
+  "deploy":{
+    "rsync":{
+      "username":"",
+      "hostname": "",
+      "dest": ""
+    },
+    "github":{
+      "remoteUrl": "",
+      "branch": "",
+      "message": "Deployed to Github Pages at [timestamp]"
+    }
+  }
 }
