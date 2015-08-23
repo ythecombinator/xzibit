@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2015 Matheus Brasil
+Based on [reveal-boilerplate](https://github.com/willianjusten/reveal-boilerplate), Copyright (c) 2015 [Willian Justen](https://github.com/willianjusten)
+All improvements Copyright (c) 2015 [Matheus Brasil](https://github.com/mabrasil)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
