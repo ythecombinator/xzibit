@@ -3,7 +3,6 @@
 // Necessary Plugins
 var gulp     = require('gulp')
     ,plumber = require('gulp-plumber')
-    ,env     = require('minimist')(process.argv.slice(2))
     ,paths   = require('../paths')
     ,stylus  = require('gulp-stylus');
 
