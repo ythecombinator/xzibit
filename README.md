@@ -223,6 +223,23 @@ These are the data given by `config.json`:
 - Each new **slide** (horizontally navigated) is a new `.jade` file in which we work on - and after add in
  `src/templates/index.jade` making the includes in the order of presentation.
 
+  > Your `index.jade` must be something like this:
+
+    ```jade
+      doctype html
+      html
+        include layouts/head
+        body
+          .reveal
+            .slides
+
+              include ../slides/slide-1
+              include ../slides/slide-2
+              // And so on
+
+          include layouts/scripts
+    ```
+
 - Each new **vertical slide** (vertically navigated, inside a **slide**) is a `section.sec-slide` within the `section`
  in the slide that you're working in.
 
@@ -326,7 +343,7 @@ All the Gulp tasks are in the [`tasks/`](gulp/tasks) folder. Each one consists o
 
 If everything happens okay, you must see something like this:
 
-![Screenshot](/src/images/screenshot.png)
+![Screenshot](/src/images/meta/cover.png)
 
 ## Contributing
 
