@@ -16,8 +16,8 @@
       "dest": ""
     },
     "github":{
-      "remoteUrl": "https://github.com/mabrasil/xzibit",
-      "branch": "gh-pages",
+      "remoteUrl": "",
+      "branch": "",
       "message": "Deployed to Github Pages at [timestamp]"
     }
   }
