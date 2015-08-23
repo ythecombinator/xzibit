@@ -32,7 +32,7 @@ module.exports = {
         imgMinify: 'out/img',
         imgClean: 'out/img/**/*.{jpg,png,gif}',
         videos: 'out/videos',
-        notes: 'out/js/vendor/plugins/notes/'
-        deploy:'out/**/*.*',
+        notes: 'out/js/vendor/plugins/notes/',
+        deploy:'out/**/*.*'
     }
 };
