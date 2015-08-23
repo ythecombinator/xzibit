@@ -12,27 +12,25 @@ module.exports = {
         files: {
             config: './src/config.json',
             jade: 'src/templates/index.jade',
-            styl: 'src/styles/main.styl',
-            notes: 'src/js/vendor/plugins/notes/notes.html'
+            styl: 'src/styles/main.styl'
         }
 
     },
 
     browserSync: {
         html: 'out/**/*.html',
-        js: 'out/js/**/*.js',
-        css: 'out/css/**/*.css',
-        img: 'out/img/**/*'
+        js: 'out/scripts/**/*.js',
+        css: 'out/styles/**/*.css',
+        img: 'out/images/**/*'
     },
 
     build: {
         html: './out/',
-        js: 'out/js',
-        css: 'out/css',
-        imgMinify: 'out/img',
-        imgClean: 'out/img/**/*.{jpg,png,gif}',
+        js: 'out/scripts',
+        css: 'out/styles',
+        imgClean: 'out/images/**/*.{jpg,png,gif}',
+        imgMinify: 'out/images',
         videos: 'out/videos',
-        notes: 'out/js/vendor/plugins/notes/',
         deploy:'out/**/*.*'
     }
 };
