@@ -3,7 +3,6 @@
 // Necessary Plugins
 var gulp     = require('gulp')
     ,plumber = require('gulp-plumber')
-    ,env     = require('minimist')(process.argv.slice(2))
     ,paths   = require('../paths')
     ,path    = require('path')
     ,fs      = require('fs')
@@ -17,6 +16,8 @@ module.exports = gulp.task('jade', function () {
     .pipe(data(function() {
       return JSON.parse(fs.readFileSync('./src/config.json'));
     }))
-    .pipe(jade({pretty: !env.p }))
+    .pipe(jade({
+      pretty: true
+    }))
     .pipe(gulp.dest(paths.build.html))
 });

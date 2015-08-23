@@ -12,7 +12,7 @@ module.exports = gulp.task('stylus', function () {
   return gulp.src(paths.source.files.styl)
     .pipe(plumber())
     .pipe(stylus({
-      compress: env.p
+      compress: true
     }))
     .pipe(gulp.dest(paths.build.css))
 });
