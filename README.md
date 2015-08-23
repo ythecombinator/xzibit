@@ -73,7 +73,7 @@ with one task per file. You can check out the [tasks directory](gulp/tasks) to s
   $ git clone https://github.com/mabrasil/xzibit.git my_talk
   ```
 
-3. Install all dependencies:
+3. Install **all required dependencies**:
 
   ```sh
   $ cd my_talk
@@ -100,10 +100,11 @@ to change some general data - like the site *name* or *descrption*. The `config.
     "title": "My Awesome Presentation",
     "description": "My Awesome Presentation @ an Awesome Event",
     "author": "An Awesome Speaker",
-    "cover": "images/logo.png",
     "site": {
         "url": "https://github.com/mabrasil/xzibit",
-        "googleAnalytics": "UA-33656081-1"
+        "googleAnalytics": "",
+        "cover": "images/meta/screenshot.png",
+        "favicon": "images/meta/favicon.png"
     }
   },
   "deploy":{
@@ -133,7 +134,7 @@ These are the data given by `config.json`:
 
 - `description`:
 
-  **Type**: `string`
+  **Type**: `string
 
   **Equivalent**: `<meta name="description" content="">`
 
@@ -142,16 +143,6 @@ These are the data given by `config.json`:
   **Type**: `string`
 
   **Equivalent**: `<meta name="author" content="">`
-
-- `cover`:
-
-  **Type**: `string`
-
-  **Equivalent**:
-
-    - `<meta property="og:image" content="">`
-    - `<meta property="twitter:image:src" content="">`
-    - `<meta itemprop="image" content="">`
 
 ###### Site
 
@@ -166,6 +157,22 @@ These are the data given by `config.json`:
   **Type**: `string`
 
   **Description**: Your *Google Analytics ID*.
+
+- `cover`:
+
+  **Type**: `string`
+
+  **Equivalent**:
+
+    - `<meta property="og:image" content="">`
+    - `<meta property="twitter:image:src" content="">`
+    - `<meta itemprop="image" content="">`
+
+- `favicon`:
+
+  **Type**: `string`
+
+  **Description**: The *favicon* of your slides.
 
 ##### Deploy
 
