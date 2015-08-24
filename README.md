@@ -220,39 +220,53 @@ These are the data given by `config.json`:
 
 #### Write your slides
 
-- Each new **slide** (horizontally navigated) is a new `.jade` file in which we work on - and after add in
- `src/templates/index.jade` making the includes in the order of presentation.
+- Each new **slide** (horizontally navigated) is a new `.jade` file in which we work on - and after add in `src/templates/index.jade` making the includes in the order of presentation.
 
   > Your `index.jade` must be something like this:
 
     ```jade
-      doctype html
-      html
-        include layouts/head
-        body
-          .reveal
-            .slides
+    doctype html
+    html
+      include layouts/head
+      body
+        .reveal
+          .slides
 
-              include ../slides/slide-1
-              include ../slides/slide-2
-              // And so on
+            include ../slides/slide-1
+            include ../slides/slide-2
+            // And so on
 
-          include layouts/scripts
+        include layouts/scripts
     ```
 
-- Each new **vertical slide** (vertically navigated, inside a **slide**) is a `section.sec-slide` within the `section`
- in the slide that you're working in.
+- Each new **vertical slide** (vertically navigated, inside a **slide**) is a `section.sec-slide` within the `section` in the slide that you're working in.
 
-- Each new **fragment** (that makes elements appear as you navigate inside the slide - giving more interactivity) you
- have to add `.fragment` in the element. Ex.: If you want a list, but you don't want it to be displayed at once, but as
- you navigate in the slide, then you do:
+  > Inside a slide, you can add a **vertical slide** by doing this:
 
-```jade
-ul
-    li.fragment Item 1
-    li.fragment Item 2
-    li.fragment Item 3
-```
+    ```jade
+    section
+
+      // Slide 1
+      section.sec-slide
+
+        h1.white.upper Slide 1 Content
+
+      // Slide 2
+      section.sec-slide
+
+        h1.white.upper Slide 2 Content
+    ```
+
+- Each new **fragment** (that makes elements appear as you navigate inside the slide - giving more interactivity) you have to add `.fragment` in the element.
+
+  > Ex.: If you want a list, but you don't want it to be displayed at once, but as you navigate in the slide, then you do:
+
+    ```jade
+    ul
+        li.fragment Item 1
+        li.fragment Item 2
+        li.fragment Item 3
+    ```
 
 #### Understand the Folders and Files structure
 
