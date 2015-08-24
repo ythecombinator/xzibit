@@ -14,18 +14,23 @@
 
 - [What's inside?](#whats-inside)
 - [Using](#using)
+  - [Getting Started](#getting-started)
+  - [Next Steps](#next-steps)
+    - [Setup the project's basic info](setup-the-projects-basic-info)
+    - [Write your slides](#write-your-slides)
+    - [Understand the Folders and Files structure](#understand-the-folders-and-files-structure)
+    - [Understand the Gulp Tasks](#understand-the-gulp-tasks)
 - [Contributing](#contributing)
 - [License](#license)
 - [Credits](#credits)
 
 ## What's inside?
 
-Well, a modern lumberjack has many modern needings and it is only fair that (s)he uses some of the coolest
-technologies we have today, so this boilerplate includes:
+This boilerplate includes:
 
 ### Reveal.js
 
-[Reveal](https://github.com/hakimel/reveal.js/) is an amazing framework for easily creating beautiful presentations using HTML. This boilerplate also comes with the following plugins:
+[Reveal](https://github.com/hakimel/reveal.js/) is an amazing framework for easily creating beautiful presentations using HTML. This boilerplate also comes with the following plugins for Reveal:
 
 |    Command      |                 Description                  |
 |-----------------|----------------------------------------------|
@@ -39,7 +44,7 @@ technologies we have today, so this boilerplate includes:
 
 ### Jade
 
-The  [Jade Engine](http://jade-lang.com/)  is one of the most powerful templating engines we have nowadays and its use is intended to make the app templates' code more beautiful and **easier to maintain**. It also aims to solve some problems such as missing or mal-matched closing tags.
+The  [Jade Engine](http://jade-lang.com/)  is one of the most powerful templating engines we have nowadays and its use is intended to make the app templates' code more beautiful and *easier to maintain*. It also aims to solve some problems such as missing or mal-matched closing tags.
 
 ### Stylus
 
@@ -92,7 +97,7 @@ with one task per file. You can check out the [tasks directory](gulp/tasks) to s
 #### Setup the project's basic info
 
 Some of basic metadata from your slides will be rendered from a [`config.json`](/src/config.json) file. This is done to make it easier
-to change some general data - like the site *name* or *descrption*. The `config.json` initial structure is:
+to change some general data - like the presentation *name* or *descrption*. The `config.json` initial structure is:
 
 ```json
 {
@@ -283,10 +288,10 @@ If everything from the [Getting Started](#getting-started) section goes well, yo
 |   |-- videos/
 |   |-- config.json
 |-- out/
-|   |-- css/
+|   |-- styles/
 |       |-- main.css
-|   |-- img/
-|   |-- js/
+|   |-- images/
+|   |-- scripts/
 |       |-- main.js
 |   |-- index.html
 |-- .editorconfig
