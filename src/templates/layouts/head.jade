@@ -1,0 +1,26 @@
+// Contains data set at config.json
+head
+
+  // Title
+  title #{about.title}
+
+  // Basic Metadata
+  meta(charset='UTF-8')
+  meta(name='description' content = "#{about.description}")
+  meta(name="author" content="#{about.author}")
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+  // Stylesheets
+  link(rel="stylesheet", type="text/css", href="vendor/reveal.js/css/reveal.css")
+  link(rel="stylesheet", type="text/css", href="vendor/reveal.js/lib/css/zenburn.css")
+  link(rel="stylesheet", type="text/css", href="vendor/chartist/dist/chartist.min.css")
+  link(rel="stylesheet", type="text/css", href="styles/main.css")
+
+  // Favicon
+  link(rel="icon", type="image/png", href = "#{about.site.favicon}")
+
+  // Social Metadata
+  include social
+
+  // Google Analytics Tracking
+  include analytics

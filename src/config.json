@@ -1,0 +1,25 @@
+{
+  "about": {
+    "title": "My Awesome Presentation",
+    "description": "My Awesome Presentation @ an Awesome Event",
+    "author": "An Awesome Speaker",
+    "site": {
+        "url": "https://github.com/mabrasil/xzibit",
+        "googleAnalytics": "",
+        "cover": "images/meta/screenshot.png",
+        "favicon": "images/meta/favicon.png"
+    }
+  },
+  "deploy":{
+    "rsync":{
+      "username":"",
+      "hostname": "",
+      "dest": ""
+    },
+    "github":{
+      "remoteUrl": "",
+      "branch": "",
+      "message": "Deployed to Github Pages at [timestamp]"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "xzibit",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mabrasil/xzibit",
+  "authors": [
+    "Matheus Brasil <mabrasil.rocks>"
+  ],
+  "description": "A boilerplate to create presentations using cool technologies.",
+  "main": [
+    "src/templates/index.jade",
+    "src/scripts/main.js",
+    "src/styles/main.styl"
+  ],
+  "keywords": [
+    "Boilerplate",
+    "RevealJS",
+    "Slides",
+    "Gulp",
+    "Jade",
+    "Stylus"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^3.1.0",
+    "chartist": "^0.9.4",
+    "vivus": "^0.2.2"
+  }
+}
