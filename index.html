@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <!-- Contains data set at config.json-->
+  <head>
+    <!-- Title-->
+    <title>My Awesome Presentation</title>
+    <!-- Basic Metadata-->
+    <meta charset="UTF-8">
+    <meta name="description" content="My Awesome Presentation @ an Awesome Event">
+    <meta name="author" content="An Awesome Speaker">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="vendor/reveal.js/css/reveal.css">
+    <link rel="stylesheet" type="text/css" href="vendor/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" type="text/css" href="vendor/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <!-- Favicon-->
+    <link rel="icon" type="image/png" href="images/meta/favicon.png">
+    <!-- Social Metadata-->
+    <!-- Social: Facebook / Open Graph-->
+    <meta property="og:title" content="undefined">
+    <meta property="og:description" content="My Awesome Presentation @ an Awesome Event">
+    <meta property="og:image" content="images/meta/screenshot.png">
+    <meta property="og:url" content="undefined">
+    <meta property="og:site_name" content="undefined">
+    <meta property="og:type" content="website">
+    <!-- Social: Twitter-->
+    <meta name="twitter:title" content="undefined">
+    <meta name="twitter:description" content="My Awesome Presentation @ an Awesome Event">
+    <meta property="twitter:image:src" content="#{about.site;cover}">
+    <meta name="twitter:url" content="undefined">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Social: Google+-->
+    <meta itemprop="name" content="undefined">
+    <meta itemprop="description" content="My Awesome Presentation @ an Awesome Event">
+    <meta itemprop="image" content="images/meta/screenshot.png">
+    <!-- Google Analytics Tracking-->
+    <!-- Google Analytics tracking-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section data-background="#009688" class="sec-slide">
+            <h1 class="white upper">Get ready for outstanding slides!</h1>
+          </section>
+          <section data-background="#4caf50" class="sec-slide">
+            <h1 class="white upper">Get ready for</h1>
+          </section>
+          <section class="sec-slide"><img src="images/logo.png" width="700px"></section>
+        </section>
+        <section>
+          <section data-background="#8e44ad" class="sec-slide">
+            <h1 class="white upper">What is it at all?</h1>
+          </section>
+          <section data-background="#3f51b5" class="sec-slide">
+            <h1 class="white upper">xzibit in a nutshell</h1>
+          </section>
+          <section data-background="#2196f3" class="sec-slide">
+            <p class="white upper">╭☞( ͡ ͡° ͜ ʖ ͡ ͡°)╭☞ it's a boilerplate of code to help you create presentations using cool kids' technologies.</p>
+            <h2 class="white fragment upper">Yeah!!!</h2>
+          </section>
+          <section data-background="#cddc39" class="sec-slide">
+            <h1 class="white upper">Which cool kids' technologies?</h1>
+          </section>
+          <section data-background="#ffeb3b" class="sec-slide">
+            <p class="fragment">Reveal.js</p>
+            <p class="fragment">Jade</p>
+            <p class="fragment">Stylus</p>
+            <p class="fragment">Gulp</p>
+            <p class="fragment">Browser Sync</p>
+            <p class="fragment">...</p>
+          </section>
+        </section>
+        <section>
+          <section data-background="#f44336" class="sec-slide">
+            <h1 class="white upper">Oh, wait a minute...</h1>
+          </section>
+          <section data-background="#8e44ad" class="sec-slide">
+            <h1 class="white upper">What kind of things can I put in my slides?</h1>
+          </section>
+          <!-- Math-->
+          <section data-background="#3f51b5" class="sec-slide">
+            <h1 class="white upper">Math!</h1>
+          </section>
+          <section data-background="#3f51b5" class="sec-slide">
+            <p>Math like we did in the elementary school...</p>$$-b \pm \sqrt{b^2 - 4ac} \over 2a$$
+            <p class="fragment">(Yeah, I do remember this.)</p>
+          </section>
+          <section data-background="#3f51b5" class="sec-slide">
+            <p>Or maybe math we do these days...</p>$$ \mathop{\int \!\!\! \int}_{\mathbf{x} \in \mathbf{R}^2}  \! \langle \mathbf{x},\mathbf{y}\rangle  \,d\mathbf{x} $$
+          </section>
+          <!-- Code-->
+          <section data-background="#2196f3" class="sec-slide">
+            <h1 class="white upper">Code!</h1>
+          </section>
+          <section data-background="#2196f3" class="sec-slide">
+            <p>Code like we did when learning Haskell <3 ...</p>
+            <pre class="middle"><code>import Control.Parallel
+
+main = a `par` b `par` c `pseq` print (a + b + c)
+    where
+        a = ack 3 10
+        b = fac 42
+        c = fib 34
+
+fac 0 = 1
+fac n = n * fac (n-1)
+
+ack 0 n = n+1
+ack m 0 = ack (m-1) 1
+ack m n = ack (m-1) (ack m (n-1))
+
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n-1) + fib (n-2)
+</code></pre>
+          </section>
+          <!-- More-->
+          <section data-background="#cddc39" class="sec-slide">
+            <h1 class="white upper">More soon...</h1>
+          </section>
+          <section data-background="#f39c12" class="sec-slide">
+            <h1 class="white upper">Wanna know more?</h1>
+          </section>
+          <section class="sec-slide">
+            <h1 class="white upper"><a href="https://github.com/mabrasil/xzibit" target="_blank">Check it out here!</a></h1>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script type="text/javascript" src="vendor/reveal.js/lib/js/head.min.js"></script>
+    <script type="text/javascript" src="vendor/reveal.js/js/reveal.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="vendor/chartist/dist/chartist.min.js"></script>
+    <script type="text/javascript" src="vendor/vivus/dist/vivus.min.js"></script>
+  </body>
+</html>
