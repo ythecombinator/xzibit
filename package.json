@@ -1,6 +1,6 @@
 {
   "name": "xzibit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A boilerplate to create presentations using cool technologies.",
   "main": "gulpfile.js",
   "scripts": {
